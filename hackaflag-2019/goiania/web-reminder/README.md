@@ -11,7 +11,7 @@ Ao acessar a URL do desafio, encontramos uma página com um campo `textarea` e u
 
 No código-fonte da página inicial, temos os seguintes trechos JavaScript:
 
-```
+```html
 <script type="text/javascript">
 	window.onload=function(){
 		if(!window.localStorage.getItem('data')){
@@ -63,7 +63,7 @@ A página `/contact` apresenta um formulário com dois campos: um captcha e uma 
 
 Por se tratar de apenas 4 caracteres hexadecimais, há apenas 16<sup>4</sup> = 65536 possibilidades, então é fácil encontrar uma colisão parcial. Este script em Python itera de 1 a 1000000 até achar um resultado compatível.
 
-```
+```python
 import sys
 import hashlib
 
