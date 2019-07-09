@@ -3,7 +3,7 @@
 - Desafio da etapa de Belo Horizonte do Hackaflag 2019
 - Data do desafio: 2019-06-29
 - Categoria: web
-- URL original:
+- URL original: `http://68.183.31.62:7598/`
 
 A URL leva a uma página com dois campos ("filename" e "Put the URL file") e um botão "send". Inserindo qualquer conteúdo e clicando no botão, a página é atualizada com o caminho do arquivo criado. Ao acessar o arquivo criado, uma página qualquer é carregada. Digitando apenas "abc" no segundo campo, a página do canal americano ABC (`abc.com`) é carregada. Com alguns testes, percebemos que o sistema está buscando o endereço informado no segundo campo e salvando uma cópia em um arquivo com o nome informado no primeiro campo.
 
