@@ -13,7 +13,7 @@ Decryption is given by _D(x) = a^(-1) × (x - b) mod m_, where _a^(-1)_ is the m
 
 In our case, _m_ = 256 because we're working with bytes instead of letters. Therefore, _a_ is an odd number between 3 and 255 (because 256 is a power of 2 and any even number would be divisible by 2). This actually means there are only 127 × 256 = 32512 possible key combinations, which is small enough to bruteforece.
 
-`file zakukozh.bin` gives us no useful information. Taking a look at the `zakukozh.bin` file with an hex editor, we can see the header starts with `60 09 eb 82 1c ef df ef`. Let's analyze the header of common image formats to find similarities:
+Entering `file zakukozh.bin` on the console gives us no useful information. Taking a look at the `zakukozh.bin` file with an hex editor, we can see the header starts with `60 09 eb 82 1c ef df ef`. Let's analyze the header of common image formats to find similarities:
 
 - JPEG: `ff d8 ff e0 xx xx 4a 46 49 46`
 - GIF: `47 49 46 38 39 61`
