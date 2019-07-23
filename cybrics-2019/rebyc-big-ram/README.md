@@ -46,7 +46,7 @@ def transform(s):
     res = ""
     for i in range(0, len(s), 2):
         chunk = s[i:i+2]
-		# add this if-else
+        # add this if-else
         if chunk.lower() not in freq:
             freq[chunk.lower()] = 1
         else:
