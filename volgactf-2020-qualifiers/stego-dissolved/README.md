@@ -8,7 +8,7 @@ For steganography challenges, a good first step is to use [Stegsolve](https://gi
 
 The hypothesis is that the flag data is hidden in these pixels. To make it easier to manipulate and experiment, let's get those pixels in Python:
 
-```
+```python
 from scipy import misc
 arr = misc.imread('stego.png')
 
@@ -24,7 +24,7 @@ The image is read as a multidimensional array, where `arr[5, 3, 0]` represents t
 
 Let's analyze what we have: `len(pixels)` returns 312, which is divisible. by 8. Also, 312÷8 = 39, which is a reasonable size for a flag. Thus, each pixel might be hiding 1 bit of data, probably in the least significant bit (LSB). We don't know which channel contains the data, so let's get the LSB of each channel separately and see what we get:
 
-```
+```python
 r_bitstream = ''
 g_bitstream = ''
 b_bitstream = ''

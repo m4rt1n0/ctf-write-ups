@@ -13,7 +13,7 @@ The code in `encryptor.py` is very short; the cipher used is AES and the key is 
 
 We'll start with the timestamp of the day of the challenge. In JavaScript, `new Date("2020-03-28").getTime()/1000` gives us 1585353600 (we want seconds, not milliseconds). We'll use the MD5 digest of this timestamp as the key to decrypt the flag.
 
-```
+```python
 timestamp = 1585353600
 key = md5(str(timestamp)).digest()
 aes = AES.new(key, AES.MODE_ECB)
@@ -22,7 +22,7 @@ outData = aes.decrypt(flag)
 
 We expect the flag to start with `VolgaCTF{`. If there's no such pattern in the decrypted flag, we'll decrease the timestamp by 1 and repeat (by wrapping our code in a `while` loop); otherwise, we probably found our flag.
 
-```
+```python
 if 'volga' in outData.lower():
   print(str(timestamp) + ': ' + outData)
   break
